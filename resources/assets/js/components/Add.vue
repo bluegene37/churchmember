@@ -60,9 +60,14 @@
                 return $('#myModal').modal('hide')
             },
             save(){
+
                 axios.post('/phonebook', this.$data.list)
                 .then((reponse)=> console.log(response))
                 .catch((error) => this.errors = error.response.data.errors)
+
+                if (false) {
+                    closeMod()
+                }
                 // this.closeMod()
             }
         }    
