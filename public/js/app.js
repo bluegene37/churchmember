@@ -46587,61 +46587,175 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-          _vm._v("Email address")
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "email",
-            id: "exampleInputEmail1",
-            placeholder: "Email"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-          _vm._v("Message")
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "inputHelpBlock",
-            "aria-describedby": "helpBlock"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "exampleInputFile" } }, [
-          _vm._v("File input")
-        ]),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "file", id: "exampleInputFile" } }),
-        _vm._v(" "),
-        _c("p", { staticClass: "help-block" }, [
-          _vm._v("Example block-level help text here.")
+    return _c("div", [
+      _c("div", { staticClass: "jumbotron jumbotron-sm" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-sm-12 col-lg-12" }, [
+              _c("h1", { staticClass: "h1" }, [
+                _vm._v("\n                    Contact us "),
+                _c("small", [_vm._v("Feel free to contact us")])
+              ])
+            ])
+          ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "checkbox" }, [
-        _c("label", [
-          _c("input", { attrs: { type: "checkbox" } }),
-          _vm._v(" Check me out\n        ")
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "well well-sm" }, [
+              _c("form", [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "name" } }, [
+                        _vm._v("\n                                Name")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          id: "name",
+                          placeholder: "Enter name",
+                          required: "required"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "email" } }, [
+                        _vm._v(
+                          "\n                                Email Address"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group" }, [
+                        _c("span", { staticClass: "input-group-addon" }, [
+                          _c("span", {
+                            staticClass: "glyphicon glyphicon-envelope"
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "email",
+                            id: "email",
+                            placeholder: "Enter email",
+                            required: "required"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "subject" } }, [
+                        _vm._v("\n                                Subject")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control",
+                          attrs: {
+                            id: "subject",
+                            name: "subject",
+                            required: "required"
+                          }
+                        },
+                        [
+                          _c(
+                            "option",
+                            { attrs: { value: "na", selected: "" } },
+                            [_vm._v("Choose One:")]
+                          ),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "service" } }, [
+                            _vm._v("General Customer Service")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "suggestions" } }, [
+                            _vm._v("Suggestions")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "product" } }, [
+                            _vm._v("Product Support")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "name" } }, [
+                        _vm._v("\n                                Message")
+                      ]),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        staticClass: "form-control",
+                        attrs: {
+                          name: "message",
+                          id: "message",
+                          rows: "9",
+                          cols: "25",
+                          required: "required",
+                          placeholder: "Message"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary pull-right",
+                        attrs: { type: "submit", id: "btnContactUs" }
+                      },
+                      [_vm._v("\n                            Send Message")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("form", [
+              _c("legend", [
+                _c("span", { staticClass: "glyphicon glyphicon-globe" }),
+                _vm._v(" Our office")
+              ]),
+              _vm._v(" "),
+              _c("address", [
+                _c("strong", [_vm._v("Kid Gwapo")]),
+                _c("br"),
+                _vm._v("\n                795 Folsom Ave, Suite 600"),
+                _c("br"),
+                _vm._v("\n                Bacolod, PH 94107"),
+                _c("br"),
+                _vm._v(" "),
+                _c("abbr", { attrs: { title: "Phone" } }, [
+                  _vm._v("\n                    P:")
+                ]),
+                _vm._v("\n                (123) 456-7890\n            ")
+              ]),
+              _vm._v(" "),
+              _c("address", [
+                _c("strong", [_vm._v("Full Name")]),
+                _c("br"),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "mailto:#" } }, [
+                  _vm._v("kidgwapo@example.com")
+                ])
+              ])
+            ])
+          ])
         ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-default", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
-      )
+      ])
     ])
   }
 ]
