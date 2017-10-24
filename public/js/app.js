@@ -45467,21 +45467,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      { staticClass: "navbar navbar-default navbar-fixed-bottom" },
-      [
-        _c("div", { staticClass: "container col-sm-7 col-sm-offset-5" }, [
-          _c("br"),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "http://qhodegry.pro" } }, [
-            _c("strong", [_vm._v("qhodegray.com")])
-          ]),
-          _vm._v(" "),
-          _c("h1")
+    return _c("footer", { staticClass: "py-5 bg-dark" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("a", { attrs: { href: "http://qhodegray.pro" } }, [
+          _c("p", { staticClass: "m-0 text-center text-white" }, [
+            _vm._v("Copyright © qhodegry.pro")
+          ])
         ])
-      ]
-    )
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -46393,10 +46387,131 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "jumbotron" }, [
-      _c("h1", [_vm._v("About")]),
+    return _c("div", { staticClass: "container" }, [
+      _c("h1", { staticClass: "my-4" }, [
+        _vm._v("About Us\r\n        "),
+        _c("small", [_vm._v("It's Nice to Meet You!")])
+      ]),
       _vm._v(" "),
-      _c("p", [_vm._v("this is paragraph")])
+      _c("p", [
+        _vm._v(
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?"
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-12" }, [
+          _c("h2", { staticClass: "my-4" }, [_vm._v("Our Team")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 col-sm-6 text-center mb-4" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid d-block mx-auto",
+            attrs: { src: "http://placehold.it/200x200", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v("John Smith\r\n            "),
+            _c("small", [_vm._v("Job Title")])
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "What does this team member to? Keep it short! This is also a great spot for social links!"
+            )
+          ])
+        ])
+      ])
     ])
   }
 ]

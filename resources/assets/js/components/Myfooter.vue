@@ -1,11 +1,11 @@
 <template>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container col-sm-7 col-sm-offset-5">
-            <br>
-                    <a href="http://qhodegry.pro"><strong>qhodegray.com</strong></a>
-            <h1></h1>
-        </div>
-    </nav>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <a href="http://qhodegray.pro"><p class="m-0 text-center text-white">Copyright &copy; qhodegry.pro</p></a>
+      </div>
+      <!-- /.container -->
+    </footer>
 
 </template>
