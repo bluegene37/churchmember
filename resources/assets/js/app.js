@@ -2,9 +2,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 let Mynav = require('./components/Mynav.vue');
@@ -16,7 +16,7 @@ let Contact = require('./components/Contact.vue');
 
 const routes = [
 
-    {path: '/home', component: Home },
+    {path: '/', component: Home },
     {path: '/about', component: About },
     {path: '/contact', component: Contact }
 

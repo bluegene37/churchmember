@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PhonebookRequest;
-use App\Phonebook;
 use Illuminate\Http\Request;
 
-class PhonebookController extends Controller
+class TestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +14,8 @@ class PhonebookController extends Controller
     public function index()
     {
         //
-        return view('/phonebook');
     }
 
-    public function getData()
-    {
-        return Phonebook::orderBy('name','ASC') -> get();
-    }
-    
     /**
      * Show the form for creating a new resource.
      *
@@ -31,7 +23,7 @@ class PhonebookController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -42,22 +34,16 @@ class PhonebookController extends Controller
      */
     public function store(Request $request)
     {
-        $pb = new Phonebook;
-        $pb->name = $request->name;
-        $pb->email = $request->email;
-        $pb->phone = $request->phone;
-        $pb->save();
-        
-        return $pb;
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Phonebook  $phonebook
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Phonebook $phonebook)
+    public function show($id)
     {
         //
     }
@@ -65,10 +51,10 @@ class PhonebookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Phonebook  $phonebook
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Phonebook $phonebook)
+    public function edit($id)
     {
         //
     }
@@ -77,34 +63,22 @@ class PhonebookController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Phonebook  $phonebook
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
-        $pb = Phonebook::findOrFail($id);
-        $pb->fill(request()->all())->save();
-
-        return response()->json([
-            'message' => 'Successfully updated',
-            'response' => true
-        ]);
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Phonebook  $phonebook
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $phoneBook = Phonebook::findOrFail($id);
-        $phoneBook->delete();
-
-        return response()->json([
-            'message' => 'Successfully deleted',
-            'response' => true
-        ]);
+        //
     }
 }

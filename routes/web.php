@@ -4,9 +4,10 @@
 //     return view('welcome');
 // });
 
-// Route::get('/phonebook/{name}',function(){
+// Route::get('/{name}',function(){
 //     return redirect('/');
 // })->where('name','[A-Za-z]+');
 
-Route::resource('phonebook', 'PhonebookController');
+
+//Route::resource('/test', 'TestController');
 Route::post('getData', 'PhonebookController@getData');

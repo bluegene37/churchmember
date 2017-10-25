@@ -1,11 +1,11 @@
 <template>
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Add New Member</h4>
+            <h4 class="modal-title" id="myModalLabel">Update {{ list.name }}'s' Details</h4>
         </div>
         <div class="modal-body">
             <form class="form-horizontal">
@@ -13,7 +13,7 @@
                     <label for="inputText3" class="col-sm-2 control-label" >Name</label>
                     <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputText3" placeholder="Name" v-model="list.name">
-                    <!-- <span class="text-danger" v-if=" errors.name ">{{ errors.name [0] }}</span> :class="{'alert-danger':errors.name}" -->
+                    <!-- <span class="text-danger" v-if=" errors.name ">{{ errors.name [0] }}</span> -->
                     </div>
 
                 </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" @click="save">Save</button>
+            <button type="button" class="btn btn-primary" @click="update">Update</button>
         </div>
         </div>
     </div>
@@ -46,29 +46,24 @@
     export default{
         data(){
             return{
-                list:{
-                    name:'',
-                    email:'',
-                    phone:''
-                },
+                list:{},
               errors:{} 
             }
         },
 
-        methods:{
-            closeMod(){
-                return $('#myModal').modal('hide')
+        methods: {
+            closeMod2() {
+                return $('#myModal2').modal('hide')
             },
-            save(){
-                axios.post('/api/phone-book', this.$data.list)
-                .then((reponse)=> {
-                    this.closeMod()
-                    this.$parent.lists.push(response.data)
+            update() {
+                axios.patch(`/api/phone-book/${this.list.id}`, this.$data.list)
+                .then(function () {
+                    this.closeMod2()
                 })
                 // .catch((error) => this.errors = error.response.data.errors)
-                .catch((error) => console.log(error))                
             }
         }    
     }
 </script>
+
 
