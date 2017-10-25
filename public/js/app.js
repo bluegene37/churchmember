@@ -45390,7 +45390,7 @@ var staticRenderFns = [
       ),
       _vm._v(" "),
       _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-        _vm._v("Logo")
+        _vm._v("Church Member")
       ])
     ])
   }
@@ -45625,6 +45625,7 @@ var Update = __webpack_require__(52);
             this.$children[2].list = this.lists[key];
         },
         delrecord: function delrecord(key, id) {
+            // vm.$forceUpdate()
             if (confirm("Are you sure?")) {
                 this.loading = !this.loading;
                 axios.delete('/api/phone-book/' + id)

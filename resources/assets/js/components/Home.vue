@@ -78,6 +78,7 @@
                 this.$children[2].list = this.lists[key]
             },
             delrecord(key,id){
+                // vm.$forceUpdate()
                 if(confirm("Are you sure?")){
                     this.loading = !this.loading
                     axios.delete(`/api/phone-book/${id}`)
@@ -92,7 +93,6 @@
                     })
                 }
             }
-
         }
     }
 
