@@ -45590,6 +45590,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 var Add = __webpack_require__(46);
 var Viewinfo = __webpack_require__(49);
@@ -46647,9 +46648,7 @@ var staticRenderFns = [
           }
         },
         [_vm._v("\n            Add New\n            ")]
-      ),
-      _vm._v(" "),
-      _vm._v('"loading">')
+      )
     ])
   }
 ]

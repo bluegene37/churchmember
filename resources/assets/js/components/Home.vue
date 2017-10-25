@@ -3,12 +3,13 @@
     <div class="col-sm-8 col-sm-offset-2">
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading"><b>Church Members Info</b>       
+            <div class="panel-heading"><b>Church Members Info</b> 
+            <!-- <i class="fa fa-refresh fa-spin fa-1x fa-fw" v-if"loading"></i>       -->
     <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#myModal">
                 Add New
                 </button>
-                    <i class="fa fa-refresh fa-spin fa-1x fa-fw" v-if"loading"></i>
+
             </div>
 
             <!-- <div class="panel-body">
@@ -87,9 +88,11 @@
                     // .catch((error) => this.errors = error.response.data.errors)
                     .catch(function (error) {
                         console.log(error)
+                    
                     })
                 }
             }
+
         }
     }
 
