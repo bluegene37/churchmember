@@ -46317,9 +46317,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return $('#myModal2').modal('hide');
         },
         update: function update() {
-            axios.patch('/api/phone-book/' + this.list.id, this.$data.list).then(function () {
-                this.closeMod2();
+            var _this = this;
+
+            axios.patch('/api/phone-book/' + this.list.id, this.$data.list).then(function (reponse) {
+                _this.closeMod2();
             });
+            // .then(function (response) {
+            //     this.closeMod2()
+            // })
             // .catch((error) => this.errors = error.response.data.errors)
         }
     }

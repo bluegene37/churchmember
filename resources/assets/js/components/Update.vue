@@ -57,9 +57,12 @@
             },
             update() {
                 axios.patch(`/api/phone-book/${this.list.id}`, this.$data.list)
-                .then(function () {
+                .then((reponse)=> {
                     this.closeMod2()
                 })
+                // .then(function (response) {
+                //     this.closeMod2()
+                // })
                 // .catch((error) => this.errors = error.response.data.errors)
             }
         }    
