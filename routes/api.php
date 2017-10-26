@@ -17,4 +17,5 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::resource('/phone-book', 'PhonebookController');
+Route::resource('phone-book', 'PhonebookController');
+Route::post('get-phone-books', 'PhonebookController@getData');

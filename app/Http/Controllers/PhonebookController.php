@@ -21,7 +21,11 @@ class PhonebookController extends Controller
 
     public function getData()
     {
-        return Phonebook::orderBy('name','ASC') -> get();
+        return response()->json([
+            'message' => 'Succussfully retrieve resources',
+            'response' => true,
+            'data' => Phonebook::orderBy('name', 'ASC')->get()
+        ]);
     }
     
     /**

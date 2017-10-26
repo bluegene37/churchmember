@@ -52,48 +52,47 @@
     let Add = require('./Add.vue')
     let Viewinfo = require('./Viewinfo.vue')
     let Update = require('./Update.vue')
+
     export default {
-        components:{
-            Add,Viewinfo,Update
+        components: {
+            Add, Viewinfo, Update
         },
-        data(){
-            return{
-            lists:{},
-            errors:{},
-            loading:false
+        data() {
+            return {
+                lists: {},
+                errors: {},
+                loading: false
             }
         },
-
-        mounted(){
-                axios.post('/getData')
-                .then((reponse)=> this.lists = reponse.data)
-                .catch((error) => this.errors = error.response.data.errors)
+        mounted() {
+                axios.post('/api/get-phone-books')
+                    .then((reponse)=> this.lists = reponse.data.data)
+                    .catch((error) => this.errors = error.response.data.errors)
         },
-
-        methods:{
-            passkeyview(key){
+        methods: {
+            passkeyview(key) {
                 this.$children[1].list = this.lists[key]
             },
-            passkeyupdate(key){
+            passkeyupdate(key) {
                 this.$children[2].list = this.lists[key]
             },
-            delrecord(key,id){
+            delrecord(key,id) {
                 // vm.$forceUpdate()
-                if(confirm("Are you sure?")){
+                if (confirm("Are you sure?")) {
                     this.loading = !this.loading
-                    axios.delete(`/api/phone-book/${id}`)
-                    // .then((reponse) => {this.splice(key,1);this.loading = !this.loading})
-                    .then(function (response) {
-                        console.log(response)
-                    })
-                    // .catch((error) => this.errors = error.response.data.errors)
-                    .catch(function (error) {
-                        console.log(error)
                     
-                    })
+                    axios.delete(`/api/phone-book/${id}`)
+                        // .then((reponse) => {this.splice(key,1);this.loading = !this.loading})
+                        .then(function (response) {
+                            console.log(response)
+                        })
+                        // .catch((error) => this.errors = error.response.data.errors)
+                        .catch(function (error) {
+                            console.log(error)
+                        
+                        })
                 }
             }
         }
     }
-
 </script>

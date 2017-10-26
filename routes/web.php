@@ -10,4 +10,3 @@
 
 
 //Route::resource('/test', 'TestController');
-Route::post('getData', 'PhonebookController@getData');

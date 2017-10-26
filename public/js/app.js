@@ -45595,6 +45595,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var Add = __webpack_require__(46);
 var Viewinfo = __webpack_require__(49);
 var Update = __webpack_require__(52);
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
         Add: Add, Viewinfo: Viewinfo, Update: Update
@@ -45609,13 +45610,12 @@ var Update = __webpack_require__(52);
     mounted: function mounted() {
         var _this = this;
 
-        axios.post('/getData').then(function (reponse) {
-            return _this.lists = reponse.data;
+        axios.post('/api/get-phone-books').then(function (reponse) {
+            return _this.lists = reponse.data.data;
         }).catch(function (error) {
             return _this.errors = error.response.data.errors;
         });
     },
-
 
     methods: {
         passkeyview: function passkeyview(key) {
@@ -45628,6 +45628,7 @@ var Update = __webpack_require__(52);
             // vm.$forceUpdate()
             if (confirm("Are you sure?")) {
                 this.loading = !this.loading;
+
                 axios.delete('/api/phone-book/' + id)
                 // .then((reponse) => {this.splice(key,1);this.loading = !this.loading})
                 .then(function (response) {
