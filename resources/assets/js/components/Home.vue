@@ -65,7 +65,7 @@
             }
         },
         mounted() {
-                axios.post('/api/get-phone-books')
+                axios.get('/api/get-phone-books')
                     .then((reponse)=> this.lists = reponse.data.data)
                     .catch((error) => this.errors = error.response.data.errors)
         },
@@ -80,7 +80,7 @@
                 // vm.$forceUpdate()
                 if (confirm("Are you sure?")) {
                     this.loading = !this.loading
-                    
+
                     axios.delete(`/api/phone-book/${id}`)
                         // .then((reponse) => {this.splice(key,1);this.loading = !this.loading})
                         .then(function (response) {
@@ -89,7 +89,6 @@
                         // .catch((error) => this.errors = error.response.data.errors)
                         .catch(function (error) {
                             console.log(error)
-                        
                         })
                 }
             }

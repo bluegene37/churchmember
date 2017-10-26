@@ -18,4 +18,4 @@ use Illuminate\Http\Request;
 // });
 
 Route::resource('phone-book', 'PhonebookController');
-Route::post('get-phone-books', 'PhonebookController@getData');
+Route::get('get-phone-books', 'PhonebookController@getData');

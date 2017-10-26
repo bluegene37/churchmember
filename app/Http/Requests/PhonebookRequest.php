@@ -24,7 +24,6 @@ class PhonebookRequest extends FormRequest
     public function rules(Request $request)
     {
         return [
-            //
             'name'=>'required|max:255',
             'phone'=>'required|min:11',
             'email'=>'required|email'

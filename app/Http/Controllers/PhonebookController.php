@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PhonebookRequest;
 use App\Phonebook;
+use Validator;
 use Illuminate\Http\Request;
 
 class PhonebookController extends Controller
@@ -46,6 +47,12 @@ class PhonebookController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request, [
+        //     'name' => 'required|min:2|max:50',
+        //     'email' => 'required|email|max:100',
+        //     'phone' => 'required|numeric|min:11|max:15'
+        // ]);
+
         $pb = new Phonebook;
         $pb->name = $request->name;
         $pb->email = $request->email;

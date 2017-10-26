@@ -45610,7 +45610,7 @@ var Update = __webpack_require__(52);
     mounted: function mounted() {
         var _this = this;
 
-        axios.post('/api/get-phone-books').then(function (reponse) {
+        axios.get('/api/get-phone-books').then(function (reponse) {
             return _this.lists = reponse.data.data;
         }).catch(function (error) {
             return _this.errors = error.response.data.errors;
